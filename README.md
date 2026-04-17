@@ -105,6 +105,18 @@ CMP x, 5
 SETGT R1
 JZ R1, L0
 OUT x
+JMP L1
+L0:
+OUT 0
+L1:
+L2:
+CMP x, 10
+SETLT R2
+JZ R2, L3
+ADD R3, x, 1
+MOV x, R3
+JMP L2
+L3:
 ```
 
 ## Notes
